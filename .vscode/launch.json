@@ -1,0 +1,45 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug UniqueInOrder",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=rust_katas",
+                    "--package=rust_katas"
+                ],
+                "filter": {
+                    "name": "rust_katas",
+                    "kind": "bin"
+                }
+            },
+            "args": ["unique-in-order", "uif34fi34iccn34r34bcvhjewbc32jhcjhc343k23k2k2k2k3jjjjhhsdcvgcvgsv"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'rust_katas'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=rust_katas",
+                    "--package=rust_katas"
+                ],
+                "filter": {
+                    "name": "rust_katas",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
