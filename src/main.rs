@@ -1,6 +1,7 @@
 use structopt::StructOpt;
 
 mod dig_pow;
+mod longest;
 mod unique_in_order;
 
 #[derive(Debug, StructOpt)]
@@ -17,6 +18,10 @@ enum Opts {
         about = "finds a positive integer k, if it exists, such that the sum of the digits of n taken to the successive powers of p is equal to k * n"
     )]
     DigPow(dig_pow::Opts),
+    #[structopt(
+        about = "Takes 2 strings s1 and s2 including only letters from a to z. Returns a new sorted string, the longest possible, containing distinct letters - each taken only once - coming from s1 or s2"
+    )]
+    Longest(longest::Opts),
 }
 
 fn main() {
@@ -26,6 +31,9 @@ fn main() {
         }
         Opts::DigPow(opts) => {
             dig_pow::main(opts);
+        }
+        Opts::Longest(opts) => {
+            longest::main(opts);
         }
     }
 }

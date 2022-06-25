@@ -33,3 +33,15 @@ $ cargo run -- dig-pow 46288 3
 Input: { n: 46288, p: 3 }
 Output: { k: 51 }
 ```
+
+### Longest
+
+Takes 2 strings s1 and s2 including only letters from a to z. Returns a new sorted string, the longest possible, containing distinct letters - each taken only once - coming from s1 or s2.
+
+Ref: https://www.codewars.com/kata/5656b6906de340bd1b0000ac
+
+```
+$ cargo run -- longest asdasd xyzxyz
+Input: { s1: 'asdasd', s2: 'xyzxyz' }
+Output: 'adsxyz'
+```
