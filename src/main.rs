@@ -1,5 +1,6 @@
 use structopt::StructOpt;
 
+mod create_phone_number;
 mod dig_pow;
 mod longest;
 mod unique_in_order;
@@ -22,6 +23,10 @@ enum Opts {
         about = "Takes 2 strings s1 and s2 including only letters from a to z. Returns a new sorted string, the longest possible, containing distinct letters - each taken only once - coming from s1 or s2"
     )]
     Longest(longest::Opts),
+    #[structopt(
+        about = "Accepts an array of integers (between 0 and 9) and formats them as a phone number"
+    )]
+    CreatePhoneNumber(create_phone_number::Opts),
 }
 
 fn main() {
@@ -34,6 +39,9 @@ fn main() {
         }
         Opts::Longest(opts) => {
             longest::main(opts);
+        }
+        Opts::CreatePhoneNumber(opts) => {
+            create_phone_number::main(opts);
         }
     }
 }

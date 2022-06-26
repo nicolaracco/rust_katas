@@ -45,3 +45,15 @@ $ cargo run -- longest asdasd xyzxyz
 Input: { s1: 'asdasd', s2: 'xyzxyz' }
 Output: 'adsxyz'
 ```
+
+### Create Phone Numbers
+
+Accepts an array of integers (between 0 and 9) and formats them as a phone number
+
+Ref: https://www.codewars.com/kata/525f50e3b73515a6db000b83
+
+```
+$ cargo run -- create-phone-number 9098437721
+Input: 9, 0, 9, 8, 4, 3, 7, 7, 2, 1
+Output: '(909) 843-7721'
+```
