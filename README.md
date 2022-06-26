@@ -57,3 +57,15 @@ $ cargo run -- create-phone-number 9098437721
 Input: 9, 0, 9, 8, 4, 3, 7, 7, 2, 1
 Output: '(909) 843-7721'
 ```
+
+### Morse Decode
+
+Decodes a morse message
+
+Ref: https://www.codewars.com/kata/54b724efac3d5402db00065e
+
+```
+$ cargo run -- morse-decode ".... . -.--   .---"
+Input: '.... . -.--   .---'
+Output: 'HEY J'
+```

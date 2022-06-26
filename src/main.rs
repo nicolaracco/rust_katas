@@ -3,6 +3,7 @@ use structopt::StructOpt;
 mod create_phone_number;
 mod dig_pow;
 mod longest;
+mod morse_decode;
 mod unique_in_order;
 
 #[derive(Debug, StructOpt)]
@@ -27,6 +28,8 @@ enum Opts {
         about = "Accepts an array of integers (between 0 and 9) and formats them as a phone number"
     )]
     CreatePhoneNumber(create_phone_number::Opts),
+    #[structopt(about = "Decodes a Morse Message")]
+    MorseDecode(morse_decode::Opts),
 }
 
 fn main() {
@@ -42,6 +45,9 @@ fn main() {
         }
         Opts::CreatePhoneNumber(opts) => {
             create_phone_number::main(opts);
+        }
+        Opts::MorseDecode(opts) => {
+            morse_decode::main(opts);
         }
     }
 }
