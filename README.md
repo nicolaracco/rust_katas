@@ -69,3 +69,15 @@ $ cargo run -- morse-decode ".... . -.--   .---"
 Input: '.... . -.--   .---'
 Output: 'HEY J'
 ```
+
+#### Bits
+
+Decodes a morse message from messages composed by 1 and 0.
+
+Ref: https://www.codewars.com/kata/54b72c16cd7f5154e9000457
+
+```
+$ cargo run -- morse-decode -b "1100110011001100000011000000111111001100111111001111110000000000000011001111110011111100111111000000110011001111110000001111110011001100000011"
+Input: '.... . -.--   .--- ..- -.. .'
+Output: 'HEY JUDE'
+```

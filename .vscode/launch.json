@@ -61,6 +61,24 @@
         {
             "type": "lldb",
             "request": "launch",
+            "name": "Debug MorseDecode Binary",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=rust_katas",
+                    "--package=rust_katas"
+                ],
+                "filter": {
+                    "name": "rust_katas",
+                    "kind": "bin"
+                }
+            },
+            "args": ["morse-decode", "-b", "1110111"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
             "name": "Debug unit tests in executable 'rust_katas'",
             "cargo": {
                 "args": [
